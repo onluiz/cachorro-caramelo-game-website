@@ -1,8 +1,12 @@
 import './index.css'
 import ClickerPrivacy from './pages/ClickerPrivacy/ClickerPrivacy'
 
-const GAMES = [
-  { name: 'Clicker', url: 'https://play.google.com/store/apps/details?id=com.cachorrocaramelo.clicker&hl=pt_BR' },
+const GAMES: { name: string; url: string; privacyPath?: string }[] = [
+  {
+    name: 'Clicker',
+    url: 'https://play.google.com/store/apps/details?id=com.cachorrocaramelo.clicker&hl=pt_BR',
+    privacyPath: '/clicker/privacidade/',
+  },
   { name: 'Runner', url: 'https://play.google.com/store/apps/details?id=com.carameloclicker.app&hl=pt_BR' },
 ]
 
@@ -98,6 +102,11 @@ function Hero() {
               <div key={game.name} className="games-list__item">
                 <h2 className="games-list__title">{game.name}</h2>
                 <PlayStoreBtn url={game.url} name={game.name} />
+                {game.privacyPath && (
+                  <a href={game.privacyPath} className="games-list__privacy">
+                    Política de Privacidade
+                  </a>
+                )}
               </div>
             ))}
           </div>

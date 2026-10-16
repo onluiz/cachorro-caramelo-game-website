@@ -402,6 +402,18 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   color: var(--text-bright);
 }
 
+.games-list__privacy {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.games-list__privacy:hover,
+.games-list__privacy:focus-visible {
+  color: var(--primary);
+}
+
 .hero__eyebrow {
   font-family: var(--font-pixel);
   font-size: 0.48rem;
