@@ -1,0 +1,164 @@
+/* Clicker privacy policy — scoped under .pp so it does not collide with the
+   global (dark, pixel-art) styles from index.css. */
+
+.pp {
+  color-scheme: light dark;
+  --pp-bg: #fdf8f0;
+  --pp-bg-card: #ffffff;
+  --pp-text: #2b2117;
+  --pp-text-muted: #6b5c4c;
+  --pp-accent: #c8752f;
+  --pp-accent-dark: #a4581c;
+  --pp-border: #ecdfcb;
+  --pp-pill-bg: #f3e6d2;
+  --pp-pill-active-bg: #c8752f;
+  --pp-pill-active-text: #ffffff;
+  --pp-shadow: 0 1px 3px rgba(43, 33, 23, 0.08), 0 8px 24px rgba(43, 33, 23, 0.06);
+
+  min-height: 100vh;
+  background: var(--pp-bg);
+  color: var(--pp-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pp {
+    --pp-bg: #1c1712;
+    --pp-bg-card: #26201a;
+    --pp-text: #f2e9dc;
+    --pp-text-muted: #b8a892;
+    --pp-accent: #e59a52;
+    --pp-accent-dark: #f0ac6c;
+    --pp-border: #3a2f24;
+    --pp-pill-bg: #362b20;
+    --pp-pill-active-bg: #e59a52;
+    --pp-pill-active-text: #1c1712;
+    --pp-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.pp__wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+
+.pp__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.pp__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pp__brand-emoji {
+  font-size: 34px;
+  line-height: 1;
+}
+
+.pp__brand-name {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.pp__brand-sub {
+  display: block;
+  font-size: 13px;
+  color: var(--pp-text-muted);
+}
+
+.pp__lang {
+  display: inline-flex;
+  background: var(--pp-pill-bg);
+  border-radius: 999px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.pp__lang button {
+  border: none;
+  background: transparent;
+  color: var(--pp-text-muted);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.pp__lang button.active {
+  background: var(--pp-pill-active-bg);
+  color: var(--pp-pill-active-text);
+}
+
+.pp__card {
+  background: var(--pp-bg-card);
+  border: 1px solid var(--pp-border);
+  border-radius: 16px;
+  box-shadow: var(--pp-shadow);
+  padding: 36px clamp(20px, 5vw, 44px);
+}
+
+.pp__title {
+  font-size: clamp(24px, 4vw, 30px);
+  margin: 0 0 6px;
+}
+
+.pp__meta {
+  color: var(--pp-text-muted);
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.pp h2 {
+  font-size: 18px;
+  margin: 32px 0 10px;
+  color: var(--pp-accent-dark);
+}
+
+.pp p {
+  margin: 1em 0;
+}
+
+.pp ul {
+  list-style: disc;
+  padding-left: 22px;
+  margin: 10px 0;
+}
+
+.pp li {
+  margin-bottom: 6px;
+}
+
+.pp a {
+  color: var(--pp-accent-dark);
+  text-decoration: underline;
+}
+
+.pp__contact {
+  margin-top: 8px;
+  padding: 14px 16px;
+  background: var(--pp-pill-bg);
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.pp__footer {
+  text-align: center;
+  margin-top: 28px;
+  color: var(--pp-text-muted);
+  font-size: 13px;
+}
+
+.pp__content > h2:first-of-type {
+  margin-top: 0;
+}

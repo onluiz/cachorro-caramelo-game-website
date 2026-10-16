@@ -1,4 +1,5 @@
 import './index.css'
+import ClickerPrivacy from './pages/ClickerPrivacy/ClickerPrivacy'
 
 const GAMES = [
   { name: 'Clicker', url: 'https://play.google.com/store/apps/details?id=com.cachorrocaramelo.clicker&hl=pt_BR' },
@@ -111,6 +112,10 @@ function Hero() {
 /* ── ROOT APP ────────────────────────────────────────────── */
 
 export default function App() {
+  const path = window.location.pathname.replace(/\/+$/, '')
+
+  if (path === '/clicker/privacidade') return <ClickerPrivacy />
+
   return (
     <main>
       <Hero />
